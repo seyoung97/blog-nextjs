@@ -1,6 +1,6 @@
 import FeaturedPosts from "@/components/FeaturedPosts";
 import Hero from "@/components/Hero";
-import PostsCard from "@/components/PostCard";
+import PostsCarousel from "@/components/PostsCarousel";
 
 export default async function HomePage() {
   return (
@@ -8,6 +8,8 @@ export default async function HomePage() {
       <Hero />
       {/* @ts-expect-error Server Component */}
       <FeaturedPosts />
+      {/* @ts-expect-error Server Component */}
+      <PostsCarousel />
     </section>
   );
 }
