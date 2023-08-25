@@ -1,11 +1,11 @@
 [
   {
-    "title": "2021년 리뷰",
-    "description": "2021년 한해 동안 배운 기술들, 생각들 정리",
-    "date": "2021-12-31",
-    "category": "my story",
-    "path": "review-2021",
-    "featured": false
+    "title": "CS 비트와 바이트",
+    "description": "computer sience의 기초 비트와 바이트에 대해 정리",
+    "date": "2022-10-30",
+    "category": "CS",
+    "path": "cs-bit-byte",
+    "featured": true
   },
   {
     "title": "자바스크립트 기초 문법",
@@ -32,16 +32,8 @@
     "featured": false
   },
   {
-    "title": "2022년 리뷰",
-    "description": "2022년 한해 동안 배운 기술들, 생각들 정리",
-    "date": "2022-12-31",
-    "category": "my story",
-    "path": "review-2022",
-    "featured": false
-  },
-  {
     "title": "나의 개발 이야기",
-    "description": "개발자가 되기로 마음먹게된 계기",
+    "description": "나는 왜 개발자가 되기로했는가? 개발자가 되기로 마음먹게된 계기",
     "date": "2022-11-10",
     "category": "my story",
     "path": "being-developer",
@@ -62,6 +54,14 @@
     "category": "React",
     "path": "react18-walkthrough",
     "featured": true
+  },
+  {
+    "title": "useState, useRef 댓글기능",
+    "description": "useState와 useRef로 댓글 기능 구현하는 방법",
+    "date": "2022-08-18",
+    "category": "React",
+    "path": "react-useState-useRef",
+    "featured": false
   },
   {
     "title": "Next.js 새로운 프로젝트 기본 세팅",
