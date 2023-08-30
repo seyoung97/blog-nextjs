@@ -1,5 +1,6 @@
 "use client";
 import { ChangeEvent, FormEvent, useState } from "react";
+import Banner, { BannerData } from "./Banner";
 
 type Form = {
   from: string;
@@ -14,6 +15,8 @@ export default function ContactForm() {
     message: "",
   });
 
+  const [banner, setBanner] = useState<BannerData | null>(null);
+
   const onChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
@@ -22,12 +25,19 @@ export default function ContactForm() {
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("form", form);
+    setBanner({ message: "성공했습니다! 😄", state: "success" });
+    setTimeout(() => {
+      setBanner(null);
+    }, 3000);
   };
 
   return (
     <>
-      <form onSubmit={onSubmit}>
-        <label htmlFor="from">Your Email</label>
+      {banner && <Banner banner={banner} />}
+      <form onSubmit={onSubmit} className="w-full max-w-md flex flex-col">
+        <label htmlFor="from" className="text-lg font-bold mb-1">
+          Your Email
+        </label>
         <input
           type="email"
           id="from"
@@ -36,8 +46,11 @@ export default function ContactForm() {
           autoFocus
           value={form.from}
           onChange={onChange}
+          className="py-1 mb-2 shadow-md rounded-md"
         />
-        <label htmlFor="subject">Subject</label>
+        <label htmlFor="subject" className="text-lg font-bold mb-1">
+          Subject
+        </label>
         <input
           type="text"
           id="subject"
@@ -46,8 +59,11 @@ export default function ContactForm() {
           autoFocus
           value={form.subject}
           onChange={onChange}
+          className="py-1 mb-2 shadow-md rounded-md"
         />
-        <label htmlFor="message">Message</label>
+        <label htmlFor="message" className="text-lg font-bold mb-1">
+          Message
+        </label>
         <textarea
           rows={10}
           id="message"
@@ -56,8 +72,11 @@ export default function ContactForm() {
           autoFocus
           value={form.message}
           onChange={onChange}
+          className=" mb-2 shadow-md rounded-md"
         />
-        <button>Submit</button>
+        <button className="mt-4 py-1 bg-sky-900 text-neutral-50	text-lg font-bold rounded-md hover:bg-sky-500">
+          Submit
+        </button>
       </form>
     </>
   );
