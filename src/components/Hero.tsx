@@ -18,10 +18,9 @@ export default function Hero() {
 
       <h2 className="text-3xl font-bold">{"Hi, I'm Joey"}</h2>
       <h3 className="text-xl">Frontend Engineer</h3>
-      <p>🥔🥔 코딩하는 감자 🥔🥔</p>
 
       <Link href="/contact">
-        <button className="px-3 py-1 mt-3 bg-amber-200 rounded-md font-bold">
+        <button className="px-3 py-1 mt-3 bg-sky-900 text-neutral-50 rounded-md font-bold">
           Contact Me
         </button>
       </Link>

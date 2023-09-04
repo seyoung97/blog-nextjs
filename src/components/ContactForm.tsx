@@ -63,7 +63,7 @@ export default function ContactForm() {
           autoFocus
           value={form.from}
           onChange={onChange}
-          className="py-1 mb-2 shadow-md rounded-md"
+          className="p-1 mb-2 shadow-md rounded-md"
         />
         <label htmlFor="subject" className="text-lg font-bold mb-1">
           Subject
@@ -76,7 +76,7 @@ export default function ContactForm() {
           autoFocus
           value={form.subject}
           onChange={onChange}
-          className="py-1 mb-2 shadow-md rounded-md"
+          className="p-1 mb-2 shadow-md rounded-md"
         />
         <label htmlFor="message" className="text-lg font-bold mb-1">
           Message
@@ -89,9 +89,9 @@ export default function ContactForm() {
           autoFocus
           value={form.message}
           onChange={onChange}
-          className=" mb-2 shadow-md rounded-md"
+          className="p-1 mb-2 shadow-md rounded-md"
         />
-        <button className="mt-4 py-1 bg-sky-900 text-neutral-50	text-lg font-bold rounded-md hover:bg-sky-500">
+        <button className="mt-4 py-1 bg-sky-900 text-neutral-50	text-lg font-bold rounded-md hover:bg-sky-400">
           Submit
         </button>
       </form>
