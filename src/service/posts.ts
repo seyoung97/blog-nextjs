@@ -1,5 +1,6 @@
 import path from "path";
 import { readFile } from "fs/promises";
+import { cache } from "react";
 
 export type Post = {
   title: string;
@@ -16,7 +17,9 @@ export type PostData = Post & {
   prev: Post | null;
 };
 
-export async function getAllPosts(): Promise<Post[]> {
+export const getAllPosts = cache(async () => {
+  console.log("getAllPosts");
+
   const filePath = path.join(process.cwd(), "data", "posts.json");
   // process.cwd()는 process가 현재 동작하고 있는 현재 경로를 받아오는 것을 의미
   return (
@@ -30,7 +33,7 @@ export async function getAllPosts(): Promise<Post[]> {
       .then((posts) => posts.sort((a, d) => (a.date > d.date ? -1 : 1)))
   );
   // 최신순으로 정렬
-}
+});
 
 export async function getFeaturedPosts(): Promise<Post[]> {
   const posts = await getAllPosts();
