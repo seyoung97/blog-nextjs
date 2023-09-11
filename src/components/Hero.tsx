@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import profileImg from "/image/myimage.jpg";
+import profileImg from "/public/image/myimage.png";
 
 export default function Hero() {
   return (
