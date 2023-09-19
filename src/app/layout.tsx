@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     default: "조이의 블로그",
     template: "조이의 블로그 | %s",
   },
-  description: "프론트엔드 개발자 조이의 블로그",
+  description: "프론트엔드 개발자 정세영의 블로그",
   icons: {
     icon: "app/favicon.ico",
   },
